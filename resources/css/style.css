@@ -91,6 +91,10 @@ nav ul {
   list-style: none;
 }
 
+.mobilenav {
+  display: none;
+}
+
 /* Gallery section */
 
 .galleryitems {
@@ -100,6 +104,11 @@ nav ul {
 }
 
 .items {
+  width: 47%;
+  margin: 10px;
+}
+
+.itemsglasses {
   width: 47%;
   margin: 10px;
 }
@@ -156,3 +165,30 @@ footer {
   padding: 5em 0;
   margin-top: 4em;
 }
+
+/* Media Queries */
+
+/* Media Queries in order to size for tablets */
+@media only screen and (max-width: 1024px) {
+  nav ul {
+    display: none;
+  }
+  .mobilenav {
+    display: block;
+    text-align: center;
+  }
+  body {
+    font-size: 16px;
+  }
+  .bannerimage-content h1 {
+    font-size: 1.5em;
+  }
+  .itemsglasses {
+    display: none;
+  }
+  .items {
+    width: 47%;
+  }
+}
+
+/* Media Queries in order to size for mobilephones */

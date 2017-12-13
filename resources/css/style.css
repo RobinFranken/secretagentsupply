@@ -108,6 +108,11 @@ nav ul {
   margin: 10px;
 }
 
+.itemswatch {
+  width: 47%;
+  margin: 10px;
+}
+
 .itemsglasses {
   width: 47%;
   margin: 10px;
@@ -192,3 +197,74 @@ footer {
 }
 
 /* Media Queries in order to size for mobilephones */
+
+@media only screen and (max-width: 470px) {
+  .mainbannercontainer {
+    height: 15rem;
+  }
+
+  h4 {
+  font-size: 0.77rem;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  .mobilenav {
+    display: block;
+    text-align: center;
+  }
+
+  .itemsglasses,
+  .itemswatch {
+    display: none;
+  }
+  .items {
+    width: 90%;
+
+  }
+  .items {
+    justify-content: center;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .information {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .info {
+    width: 90%;
+    margin-top: 0.5rem;
+  }
+
+  footer span {
+    text-align: center;
+  }
+
+  .bannerimage-content {
+   position: relative;
+   top: 10.70rem;
+   width: 100%;
+   background-color: black;
+   color: white;
+   padding: 1rem 2rem;
+  }
+
+  .header img {
+     margin: 0 auto;
+     padding: 1rem 0;
+  }
+
+ .header span {
+     display: none;
+  }
+
+ .info .title {
+     margin-top: 0.5rem;
+  }
+}

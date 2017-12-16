@@ -1,82 +1,88 @@
+/* Universal Styles */
+
 html {
   font-size: 18px;
-  background-color: white;
-  font-family: sans-serif;
-  line-height: 1.15;
-  display: block;
 }
-
-/* Body section */
 
 body {
-  font-family: Helvetica, sans-serif;
-  line-height: 1.4em;
-  margin: 0;
-  display: block;
+  font-family: "Helvetica", sans-serif;
+  line-height: 1.4;
 }
 
-div {
-  display: block;
-}
-
-/* Header section */
-
-.header {
-  background-color: black;
-  color: white;
-}
-
-.containers {
-  width: 960px;
-  margin: 0 auto;
-}
-
-.header .containers {
-  display: flex;
-  align-items: center;
-  padding: 12px 0 12px 0.5em;
-}
-
-.header img {
-  height: 1.5em;
-  padding-right: 15px;
-}
-
-img {
-  border-style: none;
-}
-
-/* Main banner section */
-
-.mainbannercontainer {
-  background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 25em;
-}
-
-.bannerimage-content {
-  background-color: black;
-  color: white;
-  width: 20em;
-  padding: 2em 3em;
-  position: relative;
-  top: 9em;
-}
-
-.bannerimage-content h3 {
-  display: block;
+h1,
+h4 {
   font-weight: bold;
 }
 
-.bannerimage-content h1 {
-   font-size: 2em;
-   line-height: 1.2em;
-   margin: 0.25em 0;
+.container {
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-/* Navigation section */
+/* Company Header */
+
+.company {
+  background-color: black;
+  color: white;
+}
+
+.company .container {
+  display: flex;
+  align-items: center;
+  padding: .66rem 0 .66rem 0.5rem;
+}
+
+.company img {
+  height: 1.5rem;
+  padding-right: 1rem;
+}
+
+/* Main Banner */
+
+.main-banner {
+  background: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 25rem;
+}
+
+.headline {
+  position: relative;
+  top: 9rem;
+  width: 20rem;
+  padding: 2rem 3rem;
+  background-color: black;
+  color: white;
+}
+
+.headline h1 {
+  margin: 0.25rem 0;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+@media only screen and (max-width: 470px) {
+  .main-banner {
+    height: 15rem;
+  }
+
+  .headline {
+    width: 100%;
+    padding: 1rem 2rem;
+    top: 10rem;
+  }
+
+  .headline h4 {
+    font-size: .77rem;
+  }
+
+  .headline h1 {
+    font-size: 1rem;
+  }
+}
+
+/* Navigation Bar */
 
 nav {
   background-color: firebrick;
@@ -87,68 +93,56 @@ nav ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75em 0;
-  list-style: none;
+  padding: 0.75rem 0;
 }
 
-.mobilenav {
+.mobile-nav {
   display: none;
 }
 
-/* Gallery section */
+@media only screen and (max-width: 1024px) {
+  nav ul {
+    display: none;
+  }
 
-.galleryitems {
+  .mobile-nav {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* Products and Business Information Section */
+
+.products,
+.business-info {
   display: flex;
   justify-content: space-between;
-  margin: 3em 0 0 0;
+  margin-top: 3rem;
 }
 
-.items {
-  width: 47%;
-  margin: 10px;
+.product {
+  width: 30%;
 }
 
-.itemswatch {
-  width: 47%;
-  margin: 10px;
-}
-
-.itemsglasses {
-  width: 47%;
-  margin: 10px;
-}
-
-.itemsimage {
-  border: 4px solid black;
-  padding: 2em 0;
-  height: 9em;
+.product-image {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 9rem;
+  padding: 2rem 0;
+  border: 4px solid black;
 }
 
-.itemsimage img {
-  max-width: 8em;
-}
-
-img {
-  border-style: none;
+.product-image img {
+  max-width: 8rem;
 }
 
 .description {
   display: block;
+  padding: 0.5rem;
   background-color: black;
-  color: white;
   text-align: center;
-  padding: 0.5em;
-}
-
-/* Contact section */
-
-.information {
-  display: flex;
-  justify-content: space-between;
-  margin: 3em 0 0 0;
+  color: white;
 }
 
 .info {
@@ -157,114 +151,54 @@ img {
 
 .info .title {
   display: block;
+  padding: 1rem 2rem;
   background-color: black;
   color: white;
-  padding: 1em 2em;
 }
 
-/* Footer section */
-
-footer {
-  background-color: black;
-  color: white;
-  padding: 5em 0;
-  margin-top: 4em;
-}
-
-/* Media Queries */
-
-/* Media Queries in order to size for tablets */
 @media only screen and (max-width: 1024px) {
-  nav ul {
-    display: none;
-  }
-  .mobilenav {
-    display: block;
-    text-align: center;
-  }
-  body {
-    font-size: 16px;
-  }
-  .bannerimage-content h1 {
-    font-size: 1.5em;
-  }
-  .itemsglasses {
-    display: none;
-  }
-  .items {
+  .product {
     width: 47%;
   }
-}
 
-/* Media Queries in order to size for mobilephones */
-
-@media only screen and (max-width: 470px) {
-  .mainbannercontainer {
-    height: 15rem;
-  }
-
-  h4 {
-  font-size: 0.77rem;
-  }
-
-  h1 {
-    font-size: 1rem;
-  }
-
-  .mobilenav {
-    display: block;
-    text-align: center;
-  }
-
-  .itemsglasses,
-  .itemswatch {
+  .product.glasses {
     display: none;
   }
-  .items {
-    width: 90%;
+}
 
-  }
-  .items {
-    justify-content: center;
-  }
-
-  body {
-    font-size: 16px;
-  }
-
-  .information {
-    justify-content: center;
+@media only screen and (max-width: 470px) {
+  .products,
+  .business-info {
     flex-wrap: wrap;
+  }
+
+  .product {
+    width: 90%;
+    margin: auto;
+  }
+
+  .product.watch {
+    display: none;
   }
 
   .info {
     width: 90%;
-    margin-top: 0.5rem;
+    margin: 0.5rem auto;
   }
+}
 
-  footer span {
+/* Footer */
+
+footer {
+  padding: 5rem 0;
+  margin-top: 4rem;
+  background-color: black;
+  color: white;
+}
+
+
+@media only screen and (max-width: 470px) {
+  footer {
     text-align: center;
-  }
-
-  .bannerimage-content {
-   position: relative;
-   top: 10.70rem;
-   width: 100%;
-   background-color: black;
-   color: white;
-   padding: 1rem 2rem;
-  }
-
-  .header img {
-     margin: 0 auto;
-     padding: 1rem 0;
-  }
-
- .header span {
-     display: none;
-  }
-
- .info .title {
-     margin-top: 0.5rem;
   }
 }
